@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mynode
+spec:
+  replicas: 3
+  selector:
+    app: mynode
+  template:
+    metadata:
+      name: mynode
+      labels:
+        app: mynode
+    spec:
+      containers:
+      - name: mynode
+        image: msauve/mynode:v1
+        ports:
+        - containerPort: 8000
