@@ -50,6 +50,8 @@ BUILD DOCKER CONTAINER v2:
 edit node-demo/hello-https.js and change message to message of your choice.
 docker build -t msauve/mynode:v2 node-demo
 
+CREATE KUBERNETES SERVICE:
+kubectl expose rc mynode --namespace kubedemo
 
 In a separate shell, start: watch_update.sh
  
